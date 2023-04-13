@@ -8,7 +8,7 @@ date2.getTime();
 console.log(date);
 console.log(date2);
 
-//Typescript me obliga a inicializar las propiedades de la clase. Podemos hacerlo en el momento o mediante el constructor
+//Typescript me obliga a inicializar los atributos de la clase. Podemos hacerlo en el momento o mediante el constructor:
 export class MyDate {
   year: number;
   month: number;

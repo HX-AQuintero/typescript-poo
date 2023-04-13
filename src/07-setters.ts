@@ -36,7 +36,7 @@ export class MyDate {
     return this._year;
   }
 
-  set year(newValue: number) { // setters no deben retornar nada. Serán entonces void type
+  set year(newValue: number) { // setters no deben retornar nada. Serán entonces void type, pero da error si se especifica
    if(1900 <= newValue && newValue <= 2000){
       this._year = newValue;
    } else {

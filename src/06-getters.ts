@@ -4,7 +4,7 @@ export class MyDate {
   constructor(
     public year: number = 1996,
     readonly month: number = 8,
-    private readonly _day: number //evita confusiones entre el getter y la propiedad privada
+    private readonly _day: number //evita confusiones entre el getter y el atributo privado
   ) {}
 
   printFormat(): string {
@@ -29,17 +29,16 @@ export class MyDate {
     return this._day
   }
 
-  get isLeapYear(): boolean { //No necesariamente existen para usar propiedades o métodos privados
+  get isLeapYear(): boolean { //No necesariamente existen para usar atributos o métodos privados
     return this.year % 400 === 0 ? true : this.year % 100 === 0 ? false : this.year % 4 === 0
   }
 
   // get getterError(): void {} //Error! Todos los getters deben siempre retornar algo
-
 }
 
 const date = new MyDate(2004, 7, 9);
 console.log('current date:', date.printFormat());
-date.day; // No es la propiedad privada, es el getter!
+date.day; // No es el atributo privado, es el getter!
 console.log('dia:', date.day);
 console.log('¿es bisiesto?', date.isLeapYear); //Sin ejecutar por ser getter
 

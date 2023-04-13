@@ -2,7 +2,7 @@ export type Date = 'days' | 'months' | 'years';
 
 export class MyDate {
   year: number;
-  readonly month: number; //indica que esta propiedad será inmutable
+  readonly month: number; //indica que este atributo será inmutable
   private day: number;
 
   constructor(year: number, month: number, day: number){
@@ -41,5 +41,5 @@ console.log('current date:', date.printFormat());
 // date.day = 2004; // error! Solo accesible dentro de la clase
 // date.addPadding(12); // error! Solo accesible dentro de la clase
 
-//date.#addPadding(12); // se usa también # para definir métodos o propiedades privadas
+//date.#addPadding(12); // se usa también # para definir métodos o atributos privados
 console.log(date.getDay());

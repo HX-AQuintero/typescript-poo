@@ -1,7 +1,7 @@
 export type Date = 'days' | 'months' | 'years';
 
 export class MyDate {
-  constructor( //con esta nueva sintaxis, debemos explicitar el acceso a las propiedades
+  constructor( //con esta nueva sintaxis, debemos explicitar el acceso a los atributos
     public year: number = 1996, //puedo definir valores por defecto
     readonly month: number = 8, //puedo definir valores por defecto
     private readonly day: number //puedo definir que accesibilidad y mutabilidad
