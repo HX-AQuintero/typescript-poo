@@ -1,4 +1,5 @@
-export abstract class Animal { // usando "abstract" impido que pueda crear instancias de la clase, PERO puedo heredar las propiedades de dicha clase a una hija
+// usando "abstract" impido que pueda crear instancias de la clase, PERO puedo heredar las propiedades de dicha clase a una hija
+export abstract class Animal { 
   constructor(protected name: string){}
 
   move(): void {

@@ -27,7 +27,7 @@ export class MyServiceSingleton {
     return this.name;
   }
 
-  public static createInstance(name: string) {
+  public static createInstance(name: string): MyServiceSingleton {
     if(MyServiceSingleton.instance === null){
       MyServiceSingleton.instance = new MyServiceSingleton(name);
     }
