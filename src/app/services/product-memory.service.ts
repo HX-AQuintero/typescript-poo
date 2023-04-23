@@ -14,10 +14,14 @@ export class ProductMemoryService implements ProductService {
     const newProduct = {
       ...data,
       id: faker.datatype.number(),
+      createdAt: faker.date.recent(),
+      updateAt: faker.date.recent(),
       category: {
         id: data.categoryId,
         name: faker.commerce.department(),
         image: faker.image.imageUrl(),
+        createdAt: faker.date.recent(),
+        updateAt: faker.date.recent()
       }
     }
     return this.add(newProduct);
